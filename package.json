@@ -8,7 +8,8 @@
     "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
     "simple-example": "node ./examples/simple/server",
     "layout-example": "node ./examples/layout/server",
-    "remount-example": "webpack --config ./examples/remount/webpack.js && node ./examples/remount/server"
+    "remount-example": "webpack --config ./examples/remount/webpack.js && node ./examples/remount/server",
+    "precompiled-example": "babel examples/precompiled/src --out-dir examples/precompiled/lib --presets react && node ./examples/precompiled/lib/server.js"
   },
   "repository": {
     "type": "git",
@@ -36,8 +37,10 @@
   },
   "devDependencies": {
     "babel": "^5.x.x",
+    "babel-cli": "^6.0.12",
     "babel-core": "^5.x.x",
     "babel-loader": "^5.x.x",
+    "babel-preset-react": "^6.0.12",
     "code": "^1.x.x",
     "hapi": "^11.x.x",
     "inert": "^3.x.x",

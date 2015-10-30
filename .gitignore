@@ -1,2 +1,4 @@
 node_modules
+npm-debug.log
 examples/remount/assets
+examples/precompiled/lib
